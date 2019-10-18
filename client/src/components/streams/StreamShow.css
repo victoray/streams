@@ -1,0 +1,12 @@
+.stream h1 {
+    color: white;
+}
+
+.description {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+video {
+    width: 100%;
+}

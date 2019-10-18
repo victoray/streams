@@ -3,6 +3,7 @@ import {deleteStream, getStream} from "../../actions";
 import {connect} from 'react-redux';
 import Modal from "./Modal";
 import history from "../../history";
+import Spinner from "../Spinner";
 
 class StreamDelete extends React.Component {
 
@@ -33,12 +34,7 @@ class StreamDelete extends React.Component {
 
     render() {
         if (!this.props.stream) {
-            return (
-                <div className="ui segment">
-                    <div className="ui active dimmer">
-                        <div className="ui massive text loader">Loading</div>
-                    </div>
-                </div>)
+            return (<Spinner/>)
         }
         const {stream} = this.props;
         return (

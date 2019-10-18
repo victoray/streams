@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from "react-redux";
 import {editStream, getStream} from "../../actions";
 import StreamForm from "./StreamForm";
+import Spinner from "../Spinner";
 
 class StreamEdit extends React.Component {
 
@@ -16,7 +17,7 @@ class StreamEdit extends React.Component {
 
     render() {
         if (!this.props.stream) {
-            return (<div className={"ui loading inverted segment"}> Loading </div>)
+            return <Spinner/>
         }
 
         const stream = this.props.stream;
